@@ -11803,11 +11803,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\danit\\Desktop\\SWTowerApi\\SENAI_WSTower\\API\\Senai.WSTowerWebApi.DataBaseFirst\\Senai.WSTowerWebApi.DataBaseFirst\\Senai.WSTowerWebApi.DataBaseFirst.csproj",
+      "projectUniqueName": "C:\\Users\\danit\\Desktop\\SWTower\\WSTower.Senai\\API\\Senai.WSTowerWebApi.DataBaseFirst\\Senai.WSTowerWebApi.DataBaseFirst\\Senai.WSTowerWebApi.DataBaseFirst.csproj",
       "projectName": "Senai.WSTowerWebApi.DataBaseFirst",
-      "projectPath": "C:\\Users\\danit\\Desktop\\SWTowerApi\\SENAI_WSTower\\API\\Senai.WSTowerWebApi.DataBaseFirst\\Senai.WSTowerWebApi.DataBaseFirst\\Senai.WSTowerWebApi.DataBaseFirst.csproj",
+      "projectPath": "C:\\Users\\danit\\Desktop\\SWTower\\WSTower.Senai\\API\\Senai.WSTowerWebApi.DataBaseFirst\\Senai.WSTowerWebApi.DataBaseFirst\\Senai.WSTowerWebApi.DataBaseFirst.csproj",
       "packagesPath": "C:\\Users\\danit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\danit\\Desktop\\SWTowerApi\\SENAI_WSTower\\API\\Senai.WSTowerWebApi.DataBaseFirst\\Senai.WSTowerWebApi.DataBaseFirst\\obj\\",
+      "outputPath": "C:\\Users\\danit\\Desktop\\SWTower\\WSTower.Senai\\API\\Senai.WSTowerWebApi.DataBaseFirst\\Senai.WSTowerWebApi.DataBaseFirst\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

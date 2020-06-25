@@ -46,7 +46,9 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Repositories
 
         public void Deletar(int id)
         {
-            ctx.Jogo.Remove(BuscarPorId(id));
+            Jogo jogoBuscado = ctx.Jogo.Find(id);
+
+            ctx.Jogo.Remove(jogoBuscado);
 
             ctx.SaveChanges();
         }

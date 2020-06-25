@@ -44,13 +44,36 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Controllers
             return StatusCode(201);
         }
 
+
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-           _jogadorRepository.Deletar(id);
-           return StatusCode(204);
+            _jogadorRepository.Deletar(id);
+
+            return StatusCode(204);
         }
 
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Jogador jogadorAtualizado)
+        {
+            Jogador jogadorBuscado = _jogadorRepository.BuscarPorId(id);
+
+            if (jogadorBuscado != null)
+            {
+                try
+                {
+                    _jogadorRepository.Atualizar(id, jogadorAtualizado);
+
+                    return StatusCode(200);
+                }
+                catch (Exception erro)
+                {
+                    return BadRequest(erro);
+                }
+            }
+
+            return StatusCode(404);
+        }
 
     }
 }

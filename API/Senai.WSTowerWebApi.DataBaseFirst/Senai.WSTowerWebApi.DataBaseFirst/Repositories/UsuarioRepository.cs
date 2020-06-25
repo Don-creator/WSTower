@@ -15,21 +15,22 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Repositories
         {
             Usuario usuarioBuscado = ctx.Usuario.Find(id);
 
-            if (usuarioAtualizado.Nome != null)
-            {
-                usuarioBuscado.Nome = usuarioAtualizado.Nome;
-            }
+            usuarioBuscado.Nome = usuarioAtualizado.Nome;
 
-            ctx.Usuario.Update(usuarioBuscado);
+            usuarioBuscado.Email = usuarioAtualizado.Email;
+
+            usuarioBuscado.Apelido = usuarioAtualizado.Apelido;
+
+            usuarioBuscado.Senha = usuarioAtualizado.Senha;
+
+            usuarioBuscado.Foto = usuarioAtualizado.Foto;
 
             ctx.SaveChanges();
         }
 
         public Usuario BuscarPorEmailSenha(string email, string senha)
         {
-            Usuario usuarioBuscado = ctx.Usuario.FirstOrDefault(u => u.Email == email && u.Senha == senha);
-
-            return usuarioBuscado;
+            throw new NotImplementedException();
         }
 
         public Usuario BuscarPorId(int id)
@@ -40,12 +41,16 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Repositories
         public void Cadastrar(Usuario novoUsuario)
         {
             ctx.Usuario.Add(novoUsuario);
+
             ctx.SaveChanges();
         }
 
         public void Deletar(int id)
         {
-            ctx.Usuario.Remove(BuscarPorId(id));
+            Usuario usuarioBuscado = ctx.Usuario.Find(id);
+
+            ctx.Usuario.Remove(usuarioBuscado);
+
             ctx.SaveChanges();
         }
 

@@ -15,12 +15,13 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Repositories
         {
             Selecao selecaoBuscada = ctx.Selecao.Find(id);
 
-            if (selecaoAtualizada.Nome != null)
-            {
-                selecaoBuscada.Nome = selecaoAtualizada.Nome;
-            }
+            selecaoBuscada.Nome = selecaoAtualizada.Nome;
 
-            ctx.Selecao.Update(selecaoBuscada);
+            selecaoBuscada.Bandeira = selecaoAtualizada.Bandeira;
+
+            selecaoBuscada.Uniforme = selecaoAtualizada.Uniforme;
+
+            selecaoBuscada.Escalacao = selecaoAtualizada.Escalacao;
 
             ctx.SaveChanges();
         }
@@ -33,12 +34,16 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Repositories
         public void Cadastrar(Selecao novaSelecao)
         {
             ctx.Selecao.Add(novaSelecao);
+
             ctx.SaveChanges();
         }
 
         public void Deletar(int id)
         {
-            ctx.Selecao.Remove(BuscarPorId(id));
+            Selecao selecaoBuscada = ctx.Selecao.Find(id);
+
+            ctx.Selecao.Remove(selecaoBuscada);
+
             ctx.SaveChanges();
         }
 

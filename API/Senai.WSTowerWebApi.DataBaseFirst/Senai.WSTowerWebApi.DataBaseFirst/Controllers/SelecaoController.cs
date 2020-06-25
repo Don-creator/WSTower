@@ -50,5 +50,27 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Controllers
             _selecaoRepository.Deletar(id);
             return StatusCode(204);
         }
+
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Selecao selecaoAtualizada)
+        {
+            Selecao selecaoBuscada = _selecaoRepository.BuscarPorId(id);
+
+            if (selecaoBuscada != null)
+            {
+                try
+                {
+                    _selecaoRepository.Atualizar(id, selecaoAtualizada);
+
+                    return StatusCode(200);
+                }
+                catch (Exception erro)
+                {
+                    return BadRequest(erro);
+                }
+            }
+
+            return StatusCode(404);
+        }
     }
 }

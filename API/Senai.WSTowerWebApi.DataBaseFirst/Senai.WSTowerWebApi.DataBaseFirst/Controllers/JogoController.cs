@@ -2,6 +2,7 @@
 using Senai.WSTowerWebApi.DataBaseFirst.Domains;
 using Senai.WSTowerWebApi.DataBaseFirst.Interfaces;
 using Senai.WSTowerWebApi.DataBaseFirst.Repositories;
+using System;
 
 namespace Senai.WSTowerWebApi.DataBaseFirst.Controllers
 {
@@ -44,6 +45,28 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Controllers
         {
             _jogoRepository.Deletar(id);
             return StatusCode(204);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Jogo jogoAtualizado)
+        {
+            Jogo jogoBuscado = _jogoRepository.BuscarPorId(id);
+
+            if (jogoBuscado != null)
+            {
+                try
+                {
+                    _jogoRepository.Atualizar(id, jogoAtualizado);
+
+                    return StatusCode(200);
+                }
+                catch (Exception erro)
+                {
+                    return BadRequest(erro);
+                }
+            }
+
+            return StatusCode(404);
         }
     }
 }

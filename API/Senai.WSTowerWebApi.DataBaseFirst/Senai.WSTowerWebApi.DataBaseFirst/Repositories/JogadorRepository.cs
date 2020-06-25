@@ -1,4 +1,5 @@
-﻿using Senai.WSTowerWebApi.DataBaseFirst.Domains;
+﻿using Microsoft.AspNetCore.Mvc;
+using Senai.WSTowerWebApi.DataBaseFirst.Domains;
 using Senai.WSTowerWebApi.DataBaseFirst.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -33,8 +34,6 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Repositories
 
             jogarBuscado.NumeroCamisa = jogadorAtualizado.NumeroCamisa;
 
-            jogarBuscado.NumeroCamisa = jogadorAtualizado.NumeroCamisa;
-
             jogarBuscado.SelecaoId = jogadorAtualizado.SelecaoId;
 
             ctx.SaveChanges();
@@ -42,19 +41,20 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Repositories
 
         public Jogador BuscarPorId(int id)
         {
-            return ctx.Jogador.FirstOrDefault(p => p.Id == id) ;
+            return ctx.Jogador.FirstOrDefault(j => j.Id == id) ;
         }
 
         public void Cadastrar(Jogador novoJogador)
         {
             ctx.Jogador.Add(novoJogador);
-
             ctx.SaveChanges();
         }
 
         public void Deletar(int id)
         {
-            ctx.Jogador.Remove(BuscarPorId(id));
+            Jogador jogadorBuscado = ctx.Jogador.Find(id);
+
+            ctx.Jogador.Remove(jogadorBuscado);
 
             ctx.SaveChanges();
         }
