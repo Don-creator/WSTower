@@ -31,6 +31,11 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Repositories
             return ctx.Selecao.FirstOrDefault(s => s.Id == id);
         }
 
+        public Selecao BuscarPorNome(string nome)
+        {
+            return ctx.Selecao.FirstOrDefault(s => s.Nome == nome);
+        }
+
         public void Cadastrar(Selecao novaSelecao)
         {
             ctx.Selecao.Add(novaSelecao);

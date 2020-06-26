@@ -53,6 +53,7 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Controllers
             return StatusCode(204);
         }
 
+        
         [HttpPut("{id}")]
         public IActionResult Put(int id, Jogador jogadorAtualizado)
         {

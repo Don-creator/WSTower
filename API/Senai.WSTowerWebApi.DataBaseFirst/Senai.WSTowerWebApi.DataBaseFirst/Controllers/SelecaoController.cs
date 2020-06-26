@@ -35,7 +35,7 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Controllers
         {
             return StatusCode(200, _selecaoRepository.BuscarPorId(Id));
         }
-
+        
         [HttpPost]
         public IActionResult Post(Selecao novaSelecao)
         {

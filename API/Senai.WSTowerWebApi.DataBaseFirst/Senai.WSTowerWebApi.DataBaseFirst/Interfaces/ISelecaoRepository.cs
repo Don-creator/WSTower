@@ -17,5 +17,6 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Interfaces
         void Deletar(int id);
 
         Selecao BuscarPorId(int id);
+
     }
 }

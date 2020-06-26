@@ -44,6 +44,7 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Repositories
             return ctx.Jogador.FirstOrDefault(j => j.Id == id) ;
         }
 
+        
         public void Cadastrar(Jogador novoJogador)
         {
             ctx.Jogador.Add(novoJogador);
@@ -63,5 +64,7 @@ namespace Senai.WSTowerWebApi.DataBaseFirst.Repositories
         {
             return ctx.Jogador.ToList();
         }
+
+        
     }
 }

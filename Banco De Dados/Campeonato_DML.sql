@@ -100,6 +100,14 @@ UPDATE Selecao SET Uniforme =
 WHERE Nome = 'Portugal';
 GO
 
+USE Campeonato;
+
 SELECT * FROM Jogador
 
 SELECT * FROM Selecao
+
+SELECT * FROM Usuario
+
+SELECT * FROM Jogo
+
+
