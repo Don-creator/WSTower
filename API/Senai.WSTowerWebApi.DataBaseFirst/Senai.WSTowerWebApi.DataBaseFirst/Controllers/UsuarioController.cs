@@ -9,21 +9,25 @@ using System.Threading.Tasks;
 
 namespace Senai.WSTowerWebApi.DataBaseFirst.Controllers
 {
-
+    // Define que o tipo de resposta da API será no formato JSON
     [Produces("application/json")]
-
+    // Define que a rota de uma requisição será no formato domínio/api/NomeController
     [Route("api/[controller]")]
-
+    // Define que é um controlador de API
     [ApiController]
+
     public class UsuarioController: ControllerBase
     {
+        // Cria um objeto _estudioRepository que irá receber todos os métodos definidos na interface
         private IUsuarioRepository _usuarioRepository;
 
+        // Instancia este objeto para que haja a referência aos métodos no repositório
         public UsuarioController()
         {
             _usuarioRepository = new UsuarioRepository();
         }
 
+        // Abaixo dessa linha estão todos os metodos definidos na interface
         [HttpGet]
         public IActionResult Get()
         {

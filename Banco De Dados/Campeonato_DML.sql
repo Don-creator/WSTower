@@ -1,4 +1,4 @@
--- Inserir seleções
+-- Inserir os valores na tabela seleção
 INSERT [dbo].[Selecao] ([Nome],[Escalacao]) VALUES (N'Alemanha', N'4-3-3')
 GO
 INSERT [dbo].[Selecao] ([Nome],[Escalacao]) VALUES (N'Argentina', N'4-4-2')

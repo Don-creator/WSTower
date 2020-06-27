@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace Senai.WSTowerWebApi.DataBaseFirst.Repositories
 {
+    // Repositório dos Jogo
     public class JogoRepository : IJogoRepository
     {
+        // Objeto contexto por onde serão chamados os métodos do Entity Framework Core
         WSTowerContext ctx = new WSTowerContext();
 
         public void Atualizar(int id, Jogo jogoAtualizado)

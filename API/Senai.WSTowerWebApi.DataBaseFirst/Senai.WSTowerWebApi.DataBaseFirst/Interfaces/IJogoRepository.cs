@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Senai.WSTowerWebApi.DataBaseFirst.Interfaces
 {
+    // Interface responsável pelo JogoRepository
     interface IJogoRepository
     {
+        // Abaixo dessa linha são criados os metodos
         List<Jogo> Listar();
 
         void Cadastrar(Jogo novoJogo);

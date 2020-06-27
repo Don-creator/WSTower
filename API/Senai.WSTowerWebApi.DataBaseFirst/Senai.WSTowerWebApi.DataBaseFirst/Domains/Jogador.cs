@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace Senai.WSTowerWebApi.DataBaseFirst.Domains
 {
+    //Classe que representa a entidade Jogador
     public partial class Jogador
     {
         public int Id { get; set; }

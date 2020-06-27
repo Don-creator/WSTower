@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace Senai.WSTowerWebApi.DataBaseFirst.Domains
 {
+    //Classe que representa a entidade Usuario
     public partial class Usuario
     {
         public int Id { get; set; }

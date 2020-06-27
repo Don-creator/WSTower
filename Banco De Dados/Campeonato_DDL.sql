@@ -2,10 +2,14 @@ USE master
 GO
 DROP DATABASE IF EXISTS Campeonato
 GO
+
+-- Criação do banco de dados
 CREATE DATABASE Campeonato
 GO
+-- Uso do banco de dados
 USE Campeonato
 GO
+-- Criação de tabelas
 CREATE TABLE Selecao(
 	Id INT PRIMARY KEY NOT NULL IDENTITY,
 	Nome VARCHAR(255) NOT NULL,
@@ -14,6 +18,7 @@ CREATE TABLE Selecao(
 	Escalacao VARCHAR(10)
 )
 GO
+-- Criação da tabela com chave estrangeira
 CREATE TABLE Jogador(
 	Id INT PRIMARY KEY NOT NULL IDENTITY,
 	Nome VARCHAR(255) NOT NULL,

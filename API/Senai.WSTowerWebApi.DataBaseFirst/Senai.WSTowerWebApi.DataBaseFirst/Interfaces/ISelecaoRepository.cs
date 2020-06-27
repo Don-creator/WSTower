@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Senai.WSTowerWebApi.DataBaseFirst.Interfaces
 {
+    // Interface responsável pelo SelecaoRepository
     interface ISelecaoRepository
     {
+        // Abaixo dessa linha são criados os metodos
         List<Selecao> Listar();
 
         void Cadastrar(Selecao novaSelecao);

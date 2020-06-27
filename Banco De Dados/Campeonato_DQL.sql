@@ -1,5 +1,7 @@
+-- Usar banco de dados
 USE [Campeonato]
 GO
+-- Inserir os valores na tabela Jogador
 INSERT [Dbo].[Jogador] ([Nome], [Nascimento], [Posicao], [QTDEFaltas], [QTDECartoesAmarelo], [QTDECartoesVermelho], [Informacoes], [NumeroCamisa], [Selecaoid], [QTDEGols]) VALUES ('Manuel Neuer', CAST('1980-01-01T00:00:00.000' AS DATETIME), 'Goleiro', 0, 0, 0, 'Nenhuma', 1, 1, 2)
 GO
 INSERT [Dbo].[Jogador] ([Nome], [Nascimento], [Posicao], [QTDEFaltas], [QTDECartoesAmarelo], [QTDECartoesVermelho], [Informacoes], [NumeroCamisa], [Selecaoid], [QTDEGols]) VALUES ('Kevin Grosskreutz', CAST('1980-01-02T00:00:00.000' AS DATETIME), 'Defensor', 5, 0, 0, 'Nenhuma', 2, 1, 0)

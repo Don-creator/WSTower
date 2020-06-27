@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace Senai.WSTowerWebApi.DataBaseFirst.Domains
 {
+    //Classe que representa a entidade Selecao
     public partial class Selecao
     {
         public Selecao()

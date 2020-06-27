@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Senai.WSTowerWebApi.DataBaseFirst.Interfaces
 {
+    // Interface responsável pelo UsuarioRepository
     interface IUsuarioRepository
     {
+        // Abaixo dessa linha são criados os metodos
         List<Usuario> Listar();
 
         void Cadastrar(Usuario novoUsuario);
